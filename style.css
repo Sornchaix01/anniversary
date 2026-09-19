@@ -1,0 +1,1010 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: "Mali", sans-serif;
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #45203f 0%,
+            #21152d 35%,
+            #100d1a 70%,
+            #080711 100%
+        );
+}
+
+
+/* ================= PAGE ================= */
+
+.page {
+    display: none;
+
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 35px 20px;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.page.active {
+    display: flex;
+
+    animation: pageFade .6s ease;
+}
+
+@keyframes pageFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 620px;
+
+    text-align: center;
+}
+
+
+/* ================= TEXT ================= */
+
+.main-title {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+
+    font-size: clamp(3rem, 8vw, 5.3rem);
+    line-height: 1.08;
+
+    color: #ffacc9;
+
+    text-shadow:
+        0 0 8px #ff528f,
+        0 0 25px rgba(255, 76, 139, .6);
+}
+
+.main-title span {
+    display: block;
+    color: #ff7bab;
+}
+
+h2 {
+    margin-bottom: 10px;
+
+    font-family: "Pacifico", cursive;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-weight: 400;
+
+    color: #ff9fc2;
+
+    text-shadow:
+        0 0 8px #ff4d8d,
+        0 0 22px rgba(255, 77, 141, .5);
+}
+
+.small-text {
+    margin-bottom: 12px;
+    color: #ffd8e5;
+}
+
+.subtitle {
+    margin: 10px 0 22px;
+
+    color: #f6dae5;
+    line-height: 1.8;
+}
+
+.date {
+    margin: 22px 0 14px;
+
+    color: #ffd4e4;
+    letter-spacing: 1px;
+}
+
+.date span {
+    margin: 0 10px;
+    color: #ff78a8;
+}
+
+.message {
+    margin: 15px 0;
+
+    color: #ffe1eb;
+    line-height: 1.8;
+}
+
+.footer-text {
+    margin-top: 20px;
+
+    color: #cdb9c5;
+
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+
+/* ================= BUTTON ================= */
+
+.main-button {
+    min-width: 190px;
+
+    margin-top: 18px;
+    padding: 14px 32px;
+
+    border: none;
+    border-radius: 999px;
+
+    font-family: "Mali", sans-serif;
+    font-size: 16px;
+
+    color: #562a3f;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd7e4,
+            #ff85b2
+        );
+
+    box-shadow:
+        0 5px 20px rgba(255, 90, 151, .4);
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.main-button:hover {
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+    box-shadow:
+        0 8px 28px rgba(255, 90, 151, .6);
+}
+
+
+/* ================= PAGE 1 ================= */
+
+.couple-main {
+    display: block;
+
+    width: min(480px, 92%);
+    max-height: 290px;
+
+    margin: 16px auto 3px;
+
+    object-fit: contain;
+
+    border-radius: 25px;
+
+    filter:
+        drop-shadow(
+            0 15px 25px rgba(0,0,0,.4)
+        );
+}
+
+
+/* ================= HEART ================= */
+
+#heart-container {
+    position: fixed;
+    inset: 0;
+
+    z-index: 3;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -60px;
+
+    opacity: 0;
+
+    color: #ff689e;
+
+    text-shadow:
+        0 0 8px #ff4d8d,
+        0 0 20px rgba(255,77,141,.6);
+
+    animation:
+        floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(.7);
+    }
+
+    10% {
+        opacity: .95;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-120vh)
+            translateX(var(--drift))
+            scale(1.15);
+    }
+
+}
+
+
+/* ================= MEMORIES ================= */
+
+.polaroid {
+    position: relative;
+
+    width: min(440px, 88%);
+
+    margin: 22px auto 14px;
+    padding: 14px 14px 20px;
+
+    background: #fff6f6;
+
+    transform: rotate(-1deg);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45);
+}
+
+.polaroid > img {
+    display: block;
+
+    width: 100%;
+    height: 310px;
+
+    object-fit: contain;
+
+    background: #17131d;
+}
+
+.polaroid p {
+    padding-top: 15px;
+
+    color: #623346;
+    line-height: 1.6;
+}
+
+.arrow {
+    position: absolute;
+    top: 42%;
+
+    z-index: 10;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    color: #71324c;
+    font-size: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe1ea,
+            #ff99ba
+        );
+
+    cursor: pointer;
+}
+
+.arrow.left {
+    left: -24px;
+}
+
+.arrow.right {
+    right: -24px;
+}
+
+.counter {
+    margin: 8px;
+    color: #f4cbd9;
+}
+
+.thumbnails {
+    display: flex;
+
+    gap: 8px;
+
+    max-width: 470px;
+
+    margin: auto;
+    padding: 8px;
+
+    overflow-x: auto;
+}
+
+.thumbnails img {
+    flex: 0 0 auto;
+
+    width: 58px;
+    height: 58px;
+
+    object-fit: cover;
+
+    border: 2px solid transparent;
+    border-radius: 8px;
+
+    opacity: .5;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.thumbnails img.selected {
+    opacity: 1;
+
+    border-color: #ff8bb5;
+
+    transform: scale(1.07);
+}
+
+.memory-decoration {
+    display: flex;
+
+    max-width: 460px;
+
+    margin: 8px auto;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.memory-couple {
+    width: 150px;
+    max-height: 145px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+}
+
+
+/* ================= SPEECH ================= */
+
+.speech-bubble {
+    max-width: 270px;
+
+    padding: 14px 17px;
+
+    border-radius: 20px 20px 20px 6px;
+
+    color: #5d3043;
+
+    line-height: 1.7;
+
+    background: #fff1f5;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+
+/* ================= LETTER ================= */
+
+.letter {
+    position: relative;
+
+    max-width: 510px;
+    min-height: 500px;
+
+    margin: 22px auto;
+    padding: 36px 34px 130px;
+
+    color: #58343f;
+
+    text-align: left;
+    line-height: 2;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #fff6ef 0,
+            #fff6ef 31px,
+            #eadbd8 32px
+        );
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.4);
+}
+
+.letter p {
+    margin-bottom: 18px;
+}
+
+.signature {
+    font-family:
+        "Pacifico",
+        cursive;
+
+    color: #ca5882;
+}
+
+.letter-couple {
+    position: absolute;
+
+    right: 10px;
+    bottom: 5px;
+
+    width: 185px;
+    max-height: 175px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    filter:
+        drop-shadow(
+            0 10px 15px rgba(0,0,0,.2)
+        );
+}
+
+
+/* ================= QUIZ ================= */
+
+.quiz-wrapper {
+    position: relative;
+
+    max-width: 500px;
+
+    margin: auto;
+}
+
+.quiz-box {
+    max-width: 470px;
+
+    margin: 22px auto;
+    padding: 28px;
+
+    color: #552d3e;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,240,245,.97);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.4);
+}
+
+#questionNumber {
+    margin-bottom: 12px;
+
+    color: #c3557e;
+}
+
+#question {
+    margin-bottom: 20px;
+
+    line-height: 1.6;
+}
+
+.answer {
+    width: 100%;
+
+    margin: 8px 0;
+    padding: 13px;
+
+    border: 1px solid #e8b6c8;
+    border-radius: 999px;
+
+    font-family:
+        "Mali",
+        sans-serif;
+
+    color: #562d40;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.answer:hover {
+    background: #ffdae7;
+
+    transform: scale(1.02);
+}
+
+.quiz-couple {
+    display: block;
+
+    width: 160px;
+    max-height: 150px;
+
+    margin: -12px auto 0;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+}
+
+
+/* ================= RESULT ================= */
+
+.score-circle {
+    display: flex;
+
+    width: 170px;
+    height: 170px;
+
+    margin: 25px auto;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 8px solid #ff89b5;
+    border-radius: 50%;
+
+    font-size: 30px;
+
+    background:
+        rgba(255,90,150,.12);
+
+    box-shadow:
+        0 0 30px rgba(255,80,145,.45);
+}
+
+.result-area {
+    display: flex;
+
+    max-width: 460px;
+
+    margin: auto;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.result-couple {
+    width: 170px;
+    max-height: 160px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+}
+
+
+/* ================= GIFT ================= */
+
+.gift-box {
+    position: relative;
+
+    width: 230px;
+    height: 190px;
+
+    margin: 70px auto 20px;
+
+    cursor: pointer;
+}
+
+.gift-body {
+    position: absolute;
+
+    bottom: 0;
+    left: 15px;
+
+    width: 200px;
+    height: 145px;
+
+    border-radius:
+        5px 5px 16px 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb0ca,
+            #df5d91
+        );
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.4);
+}
+
+.gift-lid {
+    position: absolute;
+
+    top: 17px;
+    left: 5px;
+
+    z-index: 4;
+
+    width: 220px;
+    height: 48px;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd2e0,
+            #ed74a3
+        );
+
+    transform-origin:
+        left bottom;
+
+    transition: .5s;
+}
+
+.ribbon {
+    width: 35px;
+    height: 100%;
+
+    margin: auto;
+
+    background:
+        rgba(255,226,235,.75);
+}
+
+.bow {
+    position: absolute;
+
+    top: -55px;
+    left: 80px;
+
+    color: #ffe1ec;
+
+    font-size: 62px;
+
+    text-shadow:
+        0 0 12px #ff5998;
+}
+
+.gift-box.open {
+    animation:
+        shakeGift .6s ease;
+}
+
+.gift-box.open .gift-lid {
+    transform:
+        translateY(-55px)
+        rotate(-10deg);
+}
+
+@keyframes shakeGift {
+
+    25% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(4deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
+
+}
+
+.ready {
+    color: #f8dae5;
+}
+
+
+/* ================= SURPRISE ================= */
+
+.diamond-card {
+    max-width: 420px;
+
+    margin: 22px auto;
+    padding: 28px;
+
+    border:
+        1px solid rgba(91,194,255,.3);
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(35,47,95,.95),
+            rgba(18,17,42,.97)
+        );
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.4),
+        0 0 30px rgba(60,180,255,.15);
+}
+
+.diamond {
+    font-size: 85px;
+
+    animation:
+        diamondGlow
+        1.4s
+        infinite
+        alternate;
+}
+
+@keyframes diamondGlow {
+
+    to {
+        transform: scale(1.08);
+
+        filter:
+            drop-shadow(
+                0 0 25px #4bdcff
+            );
+    }
+
+}
+
+.diamond-card h3 {
+    margin: 10px 0;
+
+    color: #bdeeff;
+
+    font-size: 25px;
+}
+
+.diamond-card p {
+    line-height: 1.8;
+}
+
+.surprise-bottom {
+    display: flex;
+
+    max-width: 460px;
+
+    margin: 10px auto;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.gift-couple {
+    width: 150px;
+    max-height: 145px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+}
+
+
+/* ================= FINAL ================= */
+
+.final-message {
+    margin: 20px auto;
+
+    color: #f6dce6;
+
+    line-height: 1.9;
+}
+
+.final-couple {
+    display: block;
+
+    width: min(470px, 90%);
+    max-height: 280px;
+
+    margin: 15px auto;
+
+    object-fit: contain;
+
+    border-radius: 25px;
+
+    filter:
+        drop-shadow(
+            0 15px 25px rgba(0,0,0,.4)
+        );
+}
+
+.happy-ending {
+    margin-top: 12px;
+
+    color: #ff9fc2;
+
+    font-size: 24px;
+}
+
+
+/* ================= SPOTIFY ================= */
+
+.spotify-section {
+    width: min(480px, 95%);
+
+    margin: 24px auto 5px;
+    padding: 16px;
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(33,20,39,.85),
+            rgba(15,13,26,.92)
+        );
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35),
+        0 0 25px rgba(255,95,150,.08);
+
+    backdrop-filter: blur(10px);
+}
+
+.spotify-heading {
+    margin-bottom: 5px;
+
+    color: #ffb0cc;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    text-shadow:
+        0 0 15px rgba(255,100,160,.4);
+}
+
+.spotify-message {
+    margin-bottom: 13px;
+
+    color: #cdb9c5;
+
+    font-size: 12px;
+}
+
+.spotify-player {
+    display: block;
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 25px 14px;
+    }
+
+    .main-title {
+        font-size: 3.2rem;
+    }
+
+    h2 {
+        font-size: 2.7rem;
+    }
+
+    .couple-main {
+        width: 95%;
+        max-height: 230px;
+    }
+
+    .polaroid {
+        width: 87%;
+    }
+
+    .polaroid > img {
+        height: 270px;
+    }
+
+    .arrow.left {
+        left: -22px;
+    }
+
+    .arrow.right {
+        right: -22px;
+    }
+
+    .memory-couple {
+        width: 110px;
+    }
+
+    .speech-bubble {
+        padding: 12px;
+
+        font-size: 12px;
+    }
+
+    .letter {
+        padding:
+            28px
+            22px
+            115px;
+
+        font-size: 14px;
+    }
+
+    .letter-couple {
+        width: 145px;
+        max-height: 135px;
+    }
+
+    .quiz-box {
+        padding: 23px 18px;
+    }
+
+    .quiz-couple {
+        width: 130px;
+    }
+
+    .result-couple {
+        width: 125px;
+    }
+
+    .gift-couple {
+        width: 115px;
+    }
+
+    .final-couple {
+        width: 95%;
+        max-height: 230px;
+    }
+
+    .spotify-section {
+        width: 100%;
+
+        padding: 12px;
+
+        border-radius: 18px;
+    }
+
+}

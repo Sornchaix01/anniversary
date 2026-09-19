@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy 3 Months ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600&family=Pacifico&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- หัวใจลอย -->
+<div id="heart-container"></div>
+
+
+<!-- ================= PAGE 1 ================= -->
+
+<section class="page active" id="page1">
+
+    <div class="content hero">
+
+        <p class="small-text">
+            ♡ สำหรับอ้วน ♡
+        </p>
+
+        <h1 class="main-title">
+            Happy
+            <span>3 Months</span>
+            Anniversary ♡
+        </h1>
+
+        <div class="date">
+            20.06.2026
+            <span>♡</span>
+            20.09.2026
+        </div>
+
+        <p class="message">
+            "ขอบคุณที่อยู่ด้วยกันมาตลอดนะ ♡"
+        </p>
+
+        <img
+            src="images/10.png"
+            class="couple-main"
+            alt="Our anniversary"
+        >
+
+        <button
+            class="main-button"
+            onclick="startWebsite()"
+        >
+            เริ่มกันเลย ♡
+        </button>
+
+        <p class="footer-text">
+            Different Places, Same Sky
+            <br>
+            Always with you ♡
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page" id="page2">
+
+    <div class="content">
+
+        <h2>
+            Our Memories ♡
+        </h2>
+
+        <p class="subtitle">
+            ช่วงเวลาที่เราเล่นเกมด้วยกัน
+        </p>
+
+        <div class="polaroid">
+
+            <button
+                class="arrow left"
+                onclick="previousMemory()"
+            >
+                ‹
+            </button>
+
+            <img
+                id="memoryImage"
+                src="images/1.png"
+                alt="Memory"
+            >
+
+            <button
+                class="arrow right"
+                onclick="nextMemory()"
+            >
+                ›
+            </button>
+
+            <p id="memoryText">
+                ความทรงจำแรก ๆ ของเรา ♡
+            </p>
+
+        </div>
+
+        <div class="counter">
+            <span id="currentMemory">1</span> / 7
+        </div>
+
+        <div class="thumbnails">
+
+            <img src="images/1.png" onclick="selectMemory(0)" alt="Memory 1">
+            <img src="images/2.png" onclick="selectMemory(1)" alt="Memory 2">
+            <img src="images/3.png" onclick="selectMemory(2)" alt="Memory 3">
+            <img src="images/4.png" onclick="selectMemory(3)" alt="Memory 4">
+            <img src="images/5.png" onclick="selectMemory(4)" alt="Memory 5">
+            <img src="images/6.png" onclick="selectMemory(5)" alt="Memory 6">
+            <img src="images/7.png" onclick="selectMemory(6)" alt="Memory 7">
+
+        </div>
+
+        <div class="memory-decoration">
+
+            <img
+                src="images/8.png"
+                class="memory-couple"
+                alt="Us"
+            >
+
+            <div class="speech-bubble">
+                ยังมีอีกหลายโมเมนต์เลยนะ ♡
+                <br>
+                ที่อยากเก็บไว้ด้วยกันไปอีกนาน
+            </div>
+
+        </div>
+
+        <button
+            class="main-button"
+            onclick="nextPage(3)"
+        >
+            หน้าต่อไป →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 3 ================= -->
+
+<section class="page" id="page3">
+
+    <div class="content">
+
+        <h2>
+            To my อ้วน ♡
+        </h2>
+
+        <div class="letter">
+
+            <p>
+                ขอบคุณที่อยู่ด้วยกันมาครบ 3 เดือนแล้วนะ
+                ถึงเราจะอยู่ไกลกัน แต่เราก็ยังทำให้ทุกวัน
+                ของเค้ามีความหมายเสมอ ♡
+            </p>
+
+            <p>
+                ขอบคุณที่คอยอยู่ข้าง ๆ กัน
+                คุยกัน เล่นเกมด้วยกัน หัวเราะด้วยกัน
+                ถึงบางวันเราจะงอนกันบ้าง 555
+                แต่เค้าก็ดีใจที่ได้คุยกับอ้วนทุกวันนะ
+            </p>
+
+            <p>
+                เค้าดีใจมากที่ได้รู้จักอ้วน
+                และหวังว่าในอนาคตเราจะมีอีกหลาย ๆ เดือน
+                หลาย ๆ ปี ให้ได้อยู่ด้วยกันแบบนี้ต่อไปนะ ♡
+            </p>
+
+            <p>
+                ขอบคุณที่เป็น "อ้วน" ของเค้าเสมอ ♡
+            </p>
+
+            <p class="signature">
+                With all my heart,
+                <br>
+                JN ♡
+            </p>
+
+            <img
+                src="images/9.png"
+                class="letter-couple"
+                alt="Us"
+            >
+
+        </div>
+
+        <button
+            class="main-button"
+            onclick="nextPage(4)"
+        >
+            มาตอบคำถามกัน ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 4 ================= -->
+
+<section class="page" id="page4">
+
+    <div class="content">
+
+        <h2>
+            Quiz Time! ♡
+        </h2>
+
+        <p class="subtitle">
+            มาลองตอบคำถามเกี่ยวกับเราสองคน ♡
+        </p>
+
+        <div class="quiz-wrapper">
+
+            <div class="quiz-box">
+
+                <p id="questionNumber">
+                    ข้อ 1 / 5
+                </p>
+
+                <h3 id="question"></h3>
+
+                <div id="answers"></div>
+
+            </div>
+
+            <img
+                src="images/8.png"
+                class="quiz-couple"
+                alt="Us"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 5 ================= -->
+
+<section class="page" id="page5">
+
+    <div class="content">
+
+        <h2>
+            Result! ♡
+        </h2>
+
+        <p class="subtitle">
+            มาดูกันว่าอ้วนจำได้แค่ไหน 555
+        </p>
+
+        <div class="score-circle">
+
+            <span id="score">
+                0 / 5
+            </span>
+
+            <small>♡</small>
+
+        </div>
+
+        <div class="result-area">
+
+            <img
+                src="images/9.png"
+                class="result-couple"
+                alt="Us"
+            >
+
+            <div
+                id="resultMessage"
+                class="speech-bubble"
+            >
+                เก่งมากกก ♡
+            </div>
+
+        </div>
+
+        <button
+            class="main-button"
+            onclick="nextPage(6)"
+        >
+            ไปดูของขวัญกันเลย →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 6 ================= -->
+
+<section class="page" id="page6">
+
+    <div class="content">
+
+        <h2>
+            A Little Surprise
+            <br>
+            For You ♡
+        </h2>
+
+        <p class="subtitle">
+            เค้ามีของขวัญเล็ก ๆ ให้อ้วนนะ...
+        </p>
+
+        <div
+            class="gift-box"
+            onclick="openGift()"
+        >
+
+            <div class="gift-lid">
+                <div class="bow">
+                    ♡
+                </div>
+            </div>
+
+            <div class="gift-body">
+                <div class="ribbon"></div>
+            </div>
+
+        </div>
+
+        <p class="ready">
+            พร้อมเปิดไหมม ♡
+        </p>
+
+        <button
+            class="main-button"
+            onclick="openGift()"
+        >
+            Tap to Open ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 7 ================= -->
+
+<section class="page" id="page7">
+
+    <div class="content">
+
+        <h2>
+            Surprise! ♡
+        </h2>
+
+        <p class="subtitle">
+            เค้ามีอะไรให้อ้วนด้วยนะ!
+        </p>
+
+        <div class="diamond-card">
+
+            <div class="diamond">
+                💎
+            </div>
+
+            <h3>
+                MLBB Diamonds
+            </h3>
+
+            <p>
+                เอาไว้สุ่มสกินอนิเมะ
+                <br>
+                ที่อ้วนอยากได้นะ ♡
+            </p>
+
+        </div>
+
+        <div class="surprise-bottom">
+
+            <img
+                src="images/8.png"
+                class="gift-couple"
+                alt="Us"
+            >
+
+            <div class="speech-bubble">
+                ขอให้ได้เร็ว ๆ น้าา ✨
+                <br>
+                แต่ถ้าไม่ได้อย่าโทษเค้านะ 555 ♡
+            </div>
+
+        </div>
+
+        <button
+            class="main-button"
+            onclick="nextPage(8)"
+        >
+            ไปหน้าสุดท้าย ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 8 ================= -->
+
+<section class="page" id="page8">
+
+    <div class="content final-page">
+
+        <h2>
+            Thank you
+            <br>
+            for being you ♡
+        </h2>
+
+        <p class="final-message">
+            ขอบคุณที่เป็น "อ้วน" ของเค้า
+            <br>
+            และขอบคุณสำหรับทุกช่วงเวลาที่ผ่านมา ♡
+        </p>
+
+        <img
+            src="images/10.png"
+            class="final-couple"
+            alt="Us"
+        >
+
+        <h3 class="happy-ending">
+            Happy 3 Months ♡
+        </h3>
+
+
+        <!-- ================= SPOTIFY ================= -->
+
+        <div class="spotify-section">
+
+            <div class="spotify-heading">
+                ♡ เพลงของเรา ♡
+            </div>
+
+            <p class="spotify-message">
+                มีเพลงนึงที่เค้าอยากให้อ้วนฟังด้วยนะ 🎧
+            </p>
+
+            <iframe
+                class="spotify-player"
+                src="https://open.spotify.com/embed/track/19CoWVqDyUbiqxoyMf4HkJ?utm_source=generator"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                title="ธรรมดาแสนพิเศษ">
+            </iframe>
+
+        </div>
+
+
+        <p class="footer-text">
+            Different Places, Same Sky
+            <br>
+            Always with you ♡
+        </p>
+
+        <button
+            class="main-button"
+            onclick="nextPage(1)"
+        >
+            กลับไปหน้าแรก ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
